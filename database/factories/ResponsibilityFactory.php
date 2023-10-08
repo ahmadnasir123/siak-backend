@@ -17,7 +17,7 @@ class ResponsibilityFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->bs(),
+            'name' => $this->faker->name(),
             'role_id' => $this->faker->numberBetween(1, 50)
         ];
     }

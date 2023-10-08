@@ -29,7 +29,7 @@ class EmployeeController extends Controller
 
         // Get single data
         if ($id) {
-            $employee = $employeeQuery->with(['user', 'position', 'course', 'kelas' ])->find($id);
+            $employee = $employeeQuery->with(['user', 'position', 'course', 'kelas'])->find($id);
 
             if ($employee) {
                 return ResponseFormatter::success($employee, 'Employee found');
@@ -65,9 +65,10 @@ class EmployeeController extends Controller
             $employees->where('position_id', $position_id);
         }
         if ($course_id) {
-            $employees->whereHas('team', function ($query) use ($course_id) {
-                $query->where('course_id', $course_id);
-            });
+            $employees->where('course_id', $course_id);
+        }
+        if ($kelas_id) {
+            $employees->where('kelas_id', $kelas_id);
         }
 
         return ResponseFormatter::success(

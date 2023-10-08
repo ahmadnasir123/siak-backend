@@ -17,7 +17,8 @@ class Position extends Model
      */
     protected $fillable = [
         'name',
-        'icon'
+        'icon',
+        'employee_id'
     ];
 
     public function employees()

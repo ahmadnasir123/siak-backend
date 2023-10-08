@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -30,13 +30,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // Employee::factory(20)->create();
-        // Position::factory(10)->create();
-        // Kelas::factory(20)->create();
-        // Course::factory(30)->create();
-        // Role::factory(20)->create();
-        // Responsibility::factory(100)->create();
-        // Nilai::factory(50)->create();
-        // Student::factory(10)->create();
+        Position::factory(10)->create();
+        Kelas::factory(20)->create();
+        Course::factory(30)->create();
+        Role::factory(20)->create();
+        Responsibility::factory(100)->create();
+        Nilai::factory(50)->create();
+        Student::factory(10)->create();
         Student_Class::factory(50)->create();
     }
 }

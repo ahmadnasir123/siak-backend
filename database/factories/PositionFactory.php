@@ -18,7 +18,8 @@ class PositionFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'icon' => $this->faker->imageUrl()
+            'icon' => $this->faker->imageUrl(),
+            'employee_id' => $this->faker->numberBetween(1, 50)
         ];
     }
 }
